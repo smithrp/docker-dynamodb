@@ -2,7 +2,7 @@
 
 ## Run
 ```
-docker run -p 8000:8000 -t rsmith/docker-nc-dynamodb
+docker run -p 8000:8000 -t smithrp/docker-dynamodb
 ```
 
 ## Shell
@@ -11,9 +11,7 @@ Navigate to http://dockerhost:8000/shell for the dynamo gui
 ## Compose
 ```yml
 dynamoDB:
-  image: rsmith/docker-nc-dynamodb
-  volumes:
-   - .data/dynamodb/local:/var/dynamodb_local
+  image: smithrp/docker-dynamodb
   ports:
    - "8000:8000"
 ```
